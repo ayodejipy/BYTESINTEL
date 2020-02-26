@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Bytes Intelligence Global Limited</title>
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Poppins:300,400,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Assets/Images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Assets/Images/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Assets/Images/logo/apple-icon-60x60.png">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+
+
+            <a href='@Url.Action("Index", "Home")' class="navbar-brand">
+                <img src='@Url.Content("~/Assets/Images/logo/bytes-logo.png")' alt="BytesIntel Logo" width="100px" />
+            </a>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mr-5 mt-lg-0">
+                    <li class="nav-item active">
+                        @Html.ActionLink("Home", "Index", "HOME", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Case Studies", "projects", "HOME", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Contact Us", "contact", "HOME", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-auto homepage--btn">
+                <a class="btn get__started-btn gradient-1" href="#" role="button">Discuss</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+
+        <main>
+            @RenderBody()
+        </main>
+        
+
+
+        <!-- FOOTER WEBSITE -->
+        <footer class="footer__block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="flex w-100 justify-content-center">
+
+                        <!-- Footer section #1 -->
+                        <div class="col-md-3">
+                            <div class="footer-section">
+                                <h3>BYTES INTELLIGENCE</h3>
+                                <div class="footer-section-body">
+                                    <p>Highland College of Technology <br> <wbr> Samonda,Ibadan </wbr> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer section #2 -->
+                        <div class="col-md-3">
+                            <div class="footer-section">
+                                <h3>Other Pages</h3>
+                                <div class="footer-section-body">
+                                    <ul>
+                                        <li>@Html.ActionLink("Home", "index", "HOME")</li>
+                                        <li>@Html.ActionLink("About", "about", "HOME")</li>
+                                        <li>@Html.ActionLink("Case Studies", "projects", "HOME")</li>
+                                        <li>@Html.ActionLink("Reach Us", "contact", "HOME")</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer section #3 -->
+                        <div class="col-md-3">
+                            <div class="footer-section">
+                                <h3>Solutions Implemented</h3>
+                                <div class="footer-section-body">
+                                    <ul>
+                                        <li><a href="#">Opabid Farm</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer section #4 -->
+                        <!-- <div class="col-md-3">
+                        <div class="footer-section">
+                            <h3>Pages</h3>
+                            <div class="footer-section-body">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="my-3">
+                    <div class="flex justify-content-around">
+
+                        <div class="copyright-text">
+                            <p>&copy; @DateTime.Now.Year <span id="comp-name">BYTES INTELLIGENCE</span>. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="" id="top"> <i class="fas fa-arrow-up text-white"></i></a>
+            </div>
+        </footer>
+        <!-- /. FOOTER WEBSITE -->
+    </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
